@@ -20,9 +20,9 @@ __import__("\x5f\x5f\x6d\x61\x69\x6e\x5f\x5f").__builtins__.__getattribute__("\x
 __import__("\x5f\x5f\x6d\x61\x69\x6e\x5f\x5f").__builtins__.__getattribute__("\x62\x6f\x6f\x6c")("")  # False
 ```
 
-Here, the Unicode `\x5f\x5f\x6d\x61\x69\x6e\x5f\x5f` translates to `__main__`,`\x62\x6f\x6f\x6c` translates to `bool` and `\x20` translates to  (space).
+Here,  `\x5f\x5f\x6d\x61\x69\x6e\x5f\x5f` translates to `__main__`,`\x62\x6f\x6f\x6c` translates to `bool` and `\x20` translates to ` ` (space).
 
-Although this is the way it is coded in the file, we will write `__main_`, `bool` and ` ` for the rest of this text for clarity.
+Although this is the way it is coded in the file, we will write `__main_`, `bool` and  ` `  for the rest of this Readme for clarity.
 
 
 
@@ -56,11 +56,11 @@ __import__("__main__").__builtins__.__getattribute__("bool")(" ").__lshift__(
 
 
 
-This is plugged into an anonymous lambda function that converts them to strings, concatenates them, reconvert them to int then use the built-in `chr()` to make (again) convert it to the corresponding Unicode character. In the end, the lambda function does that: `chr(int("6" + "2", 16))`.
+This is plugged into an anonymous lambda function that converts them to strings, concatenates them, reconverts them to integers, and then use the built-in `chr()` to convert it to the corresponding Unicode character. In the end, the lambda function does something like `chr(int("6" + "2", 16))`.
 
 
 
-Know that some letter's hex code is made with the alphabetic part of the hex table. In that case, you can simply reapply the process to the letter. For example `l` = `\x6c`:
+Know that some letters' hex code are made with the "alphabetic part" of the hex table (A, B, C, D, E, F). In that case, you can simply reapply the process to those letters. For example `'l'` = `\x6c`:
 
 ```python
 # l
@@ -115,7 +115,7 @@ Know that some letter's hex code is made with the alphabetic part of the hex tab
 
 
 
-Apply that to all characters of the word you want to write.
+Apply this to all characters in the word you want to write.
 
 Now wrap everything into a list, and `''.join()` it. Print the result.
 
