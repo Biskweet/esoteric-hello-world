@@ -121,5 +121,5 @@ Now wrap everything into a list, and `''.join()` it. Print the result.
 
 
 
-⚠️ Note that such an algorithm can infinitely be used on itself. For instance, the <u>strings</u> `'6'` and `'2'` can themselves be generated using their hex code representation, which are `0x54` and `0x50`. Redo the process on `0x54` (`5` and `4`) and `0x50` (`5` and `0`) and now you realize the abysmal code written here is only the depth *one* of a **possible diabolical algorithm**.
+⚠️ Note that such an algorithm can infinitely be used on itself. For instance, the <u>strings</u> `'6'` and `'2'` can themselves be generated using their hex code representation, which are `0x54` and `0x50`. Redo the process on `0x54` (`5` and `4`) and `0x50` (`5` and `0`) and now you realize the abysmal code written here is only the *depth one* of a *possibly diabolical algorithm*.
 
