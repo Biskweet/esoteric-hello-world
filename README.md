@@ -20,9 +20,9 @@ __import__("\x5f\x5f\x6d\x61\x69\x6e\x5f\x5f").__builtins__.__getattribute__("\x
 __import__("\x5f\x5f\x6d\x61\x69\x6e\x5f\x5f").__builtins__.__getattribute__("\x62\x6f\x6f\x6c")("")  # False
 ```
 
-Here,  `\x5f\x5f\x6d\x61\x69\x6e\x5f\x5f` translates to `__main__`,`\x62\x6f\x6f\x6c` translates to `bool` and `\x20` translates to ` ` (space).
+Here,  `\x5f\x5f\x6d\x61\x69\x6e\x5f\x5f` translates to `__main__`,`\x62\x6f\x6f\x6c` translates to `bool` and `\x20` translates to ` `  (space).
 
-Although this is the way it is coded in the file, we will write `__main_`, `bool` and  ` `  for the rest of this Readme for clarity.
+Although this is the way it is coded in the file, we will write `__main__`, `bool` and  ` `  for the rest of this Readme for clarity.
 
 
 
