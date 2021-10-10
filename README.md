@@ -48,7 +48,7 @@ __import__("__main__").__builtins__.__getattribute__("bool")(" ").__lshift__(
 and the number `2`:
 
 ```python
-# 1 << 2
+# 1 << 2 == 2
 __import__("__main__").__builtins__.__getattribute__("bool")(" ").__lshift__(
 	__import__("__main__").__builtins__.__getattribute__("bool")(" ")
 )
