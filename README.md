@@ -115,7 +115,7 @@ Know that some letters' hex code are made with the "alphabetic part" of the hex 
 
 
 
-Apply this to all characters in the word you want to write.
+Apply this to all characters in the text you want to output.
 
 Now wrap everything into a list, and `''.join()` it. Print the result.
 
