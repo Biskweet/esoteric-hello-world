@@ -20,15 +20,15 @@ __import__("\x5f\x5f\x6d\x61\x69\x6e\x5f\x5f").__builtins__.__getattribute__("\x
 __import__("\x5f\x5f\x6d\x61\x69\x6e\x5f\x5f").__builtins__.__getattribute__("\x62\x6f\x6f\x6c")("")  # False
 ```
 
-Here,  `\x5f\x5f\x6d\x61\x69\x6e\x5f\x5f` translates to `__main__`,`\x62\x6f\x6f\x6c` translates to `bool` and `\x20` translates to ` `  (space).
+Here, `\x5f\x5f\x6d\x61\x69\x6e\x5f\x5f` translates to `__main__`,`\x62\x6f\x6f\x6c` translates to `bool` and `\x20` translates to ` ` (space).
 
-Although this is the way it is coded in the file, we will write `__main__`, `bool` and  ` `  for the rest of this Readme for clarity.
+Although this is the way it is coded in the file, we will write `__main__`, `bool` and ` ` in the rest of this Readme for clarity.
 
 
 
-Every letter gets translated from its hex code. Let's use an example, the character `b`, which is `\x62`:
+Every letter gets translated from its hex code. Let's use an example: the character `b`, which is `\x62`:
 
-The idea is that 62 is the same as `int("6" + "2")`. Thus we use a lambda function to concatenate a tuple that contain "6" and "2" to "62". Those numbers are themselves generated using our "bricks", boolean values on which we apply two operations: the **bitwise left shift** and the **addition**.
+The idea is that 62 is the same as `int("6" + "2")`. We use a lambda function to concatenate a tuple that contain "6" and "2" to "62". Those numbers are themselves generated using our "bricks", boolean values on which we apply two operations: the **bitwise left shift** and the **addition**.
 
 Here, the number `6` is generated that way:
 
@@ -48,7 +48,7 @@ __import__("__main__").__builtins__.__getattribute__("bool")(" ").__lshift__(
 and the number `2`:
 
 ```python
-# 1 << 2 == 2
+# 1 << 1 == 2
 __import__("__main__").__builtins__.__getattribute__("bool")(" ").__lshift__(
 	__import__("__main__").__builtins__.__getattribute__("bool")(" ")
 )
@@ -56,11 +56,11 @@ __import__("__main__").__builtins__.__getattribute__("bool")(" ").__lshift__(
 
 
 
-This is plugged into an anonymous lambda function that converts them to strings, concatenates them, reconverts them to integers, and then use the built-in `chr()` to convert it to the corresponding Unicode character. In the end, the lambda function does something like `chr(int("6" + "2", 16))`.
+This is plugged into an anonymous lambda function that converts them into strings, concatenates them, reconverts them to integers, and then use the built-in `chr()` to convert it to the corresponding Unicode character. In the end, the lambda function does something like `chr(int("6" + "2", 16))`.
 
 
 
-Know that some letters' hex code are made with the "alphabetic part" of the hex table (A, B, C, D, E, F). In that case, you can simply reapply the process to those letters. For example `'l'` = `\x6c`:
+Know that some letters' hex codes are made with the "alphabet part" of the hex table (A, B, C, D, E, F). In that case, you can simply reapply the process to those letters. For example `'l'` = `\x6c`:
 
 ```python
 # l
